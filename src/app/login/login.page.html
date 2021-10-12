@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenue</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button  href="/apprenant" type="submit" expand="block" shape="round" color="danger">Listes des Apprenant</ion-button>
+  <ion-button color="danger" expand="block" fill="outline" [routerLink]="['/home']">Retour</ion-button>
+
+  <p style="color: black;">Bienvenue {{prenom}} {{nom}} !</p>
+  <p style="color: black;">Connecté le {{heure | date: 'd-MM-y à H:mm'}}</p>
+
+</ion-content>
+

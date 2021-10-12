@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des Apprenants</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list >
+  <ion-item *ngFor="let l of listes">
+    {{l.nom}}   {{l.prenom}}
+  </ion-item>
+ 
+
+  <ion-button color="danger" expand="block" fill="outline" [routerLink]="['/home']">Deconnexion</ion-button>
+</ion-list>
+</ion-content>

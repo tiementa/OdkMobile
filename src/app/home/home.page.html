@@ -1,0 +1,74 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="danger">
+<form #logForm="ngForm" novalidate>
+   <ion-item color="danger">
+    <ion-label position="floating">Username</ion-label>
+    <ion-input  [(ngModel)]="login.username" name="username" type="text" #username="ngModel" required></ion-input>
+  </ion-item>
+  <ion-text color="danger" *ngIf="username.invalid && username.touched">
+    Nom d'utilisateur obligatoire
+  </ion-text>
+
+  <ion-item color="danger">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input  [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required></ion-input>
+  </ion-item>
+  <ion-text color="danger" *ngIf="password.invalid && password.touched">
+    Mot de passe obligatoire
+</ion-text>
+  <ion-button color="primary" expand="block" fill="outline" (click)="connect(logForm)">Connexion</ion-button>
+</form>
+</ion-content> -->
+
+
+
+
+
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Connexion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+
+
+
+  <form #loginForm="ngForm" novalidate>
+    <ion-list  style="padding: 0px 18px">
+      <ion-item>
+        <ion-label position="floating" color="secondary">Nom d'utilisateur</ion-label>
+        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger" *ngIf="username.invalid && username.touched">
+            Nom d'utilisateur obligatoire
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating" color="secondary">Mot de passe</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-text color="danger" *ngIf="password.invalid && password.touched">
+          Mot de passe obligatoire
+      </ion-text>
+    </ion-list>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [disabled]="loginForm.invalid" style="padding: 0px 18px" (click)="onLogin(loginForm)" type="submit" expand="block">Se connecter</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </form>
+
+</ion-content>
